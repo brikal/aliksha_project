@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- HERO (outside container) -->
+<section class="hero-full">
+
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="{% static 'videos/hero.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Welcome to Aliksha</h1>
+        <p>Pure cotton sarees, thoughtfully crafted for everyday elegance.</p>
+        <a href="/new-collections/" class="shop-now-btn">Shop Now</a>
+    </div>
+
+    <!-- Video Play/Pause Button -->
+    <button class="video-control-btn" id="videoControlBtn">
+        <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+    </button>
+
+</section>
+
+<!-- Collections Section -->
+<section class="collections-section">
+    <!-- Collection 1: Cotton Sarees -->
+    <a href="/collections/cotton-sarees/" class="collections-section-link">
+        <div class="collections-section-item">
+            <div class="collections-images-full">
+                <img src="{% static 'images/red_cotton_saree.jpg' %}" alt="Cotton Saree 1">
+                <img src="{% static 'images/blue_cotton_saree.jpg' %}" alt="Cotton Saree 2">
+                <img src="{% static 'images/white_cotton_saree.jpg' %}" alt="Cotton Saree 3">
+            </div>
+            <div class="collections-overlay">
+                <h3 class="collections-title-full">Cotton Sarees</h3>
+            </div>
+        </div>
+    </a>
+
+    <!-- Collection 2: Bandhani Sarees -->
+    <a href="/collections/bandhani-sarees/" class="collections-section-link">
+        <div class="collections-section-item">
+            <div class="collections-images-full">
+                <img src="{% static 'images/black_bandhani.png' %}" alt="Bandhani Saree 1">
+                <img src="{% static 'images/brown_bandhani.png' %}" alt="Bandhani Saree 2">
+                <img src="{% static 'images/green_bandhani.png' %}" alt="Bandhani Saree 3">
+            </div>
+            <div class="collections-overlay">
+                <h3 class="collections-title-full">Bandhani Sarees</h3>
+            </div>
+        </div>
+    </a>
+
+    <!-- Collection 3: Ajrakh Sarees -->
+    <a href="/collections/ajrakh-sarees/" class="collections-section-link">
+        <div class="collections-section-item">
+            <div class="collections-images-full">
+                <img src="{% static 'images/green_ajrakh.png' %}" alt="Ajrakh Saree 1">
+                <img src="{% static 'images/black_ajrakh.png' %}" alt="Ajrakh Saree 2">
+                <img src="{% static 'images/grey_ajrakh.png' %}" alt="Ajrakh Saree 3">
+            </div>
+            <div class="collections-overlay">
+                <h3 class="collections-title-full">Ajrakh Sarees</h3>
+            </div>
+        </div>
+    </a>
+
+    <!-- Collection 4: Bandhani Dresses -->
+    <a href="/collections/bandhani-dresses/" class="collections-section-link">
+        <div class="collections-section-item">
+            <div class="collections-images-full">
+                <img src="{% static 'images/navy-blue_bandhani-dress.png' %}" alt="Bandhani Dress 1">
+                <img src="{% static 'images/brown_bandhani-dress.png' %}" alt="Bandhani Dress 2">
+                <img src="{% static 'images/green_bandhani-dress.png' %}" alt="Bandhani Dress 3">
+            </div>
+            <div class="collections-overlay">
+                <h3 class="collections-title-full">Bandhani Dresses</h3>
+            </div>
+        </div>
+    </a>
+
+    <!-- Collection 5: Batik Dresses -->
+    <a href="/collections/batik-dresses/" class="collections-section-link">
+        <div class="collections-section-item">
+            <div class="collections-images-full">
+                <img src="{% static 'images/Gemini_red_saree.png' %}" alt="Batik Dress 1">
+                <img src="{% static 'images/Gemini_red_saree.png' %}" alt="Batik Dress 2">
+                <img src="{% static 'images/Gemini_red_saree.png' %}" alt="Batik Dress 3">
+            </div>
+            <div class="collections-overlay">
+                <h3 class="collections-title-full">Batik Dresses</h3>
+            </div>
+        </div>
+    </a>
+</section>
+
+
+<!-- Stats Counter Section -->
+<section class="stats-counter-section">
+    <div class="container stats-container">
+        <!-- Stat 1: Happy Customers -->
+        <div class="stat-item">
+            <div class="stat-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+            </div>
+            <div class="stat-number-wrapper">
+                <span class="stat-count" data-target="8000">0</span>+
+            </div>
+            <div class="stat-label">Happy Customers</div>
+        </div>
+
+        <!-- Stat 2: Categories -->
+        <div class="stat-item">
+            <div class="stat-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+            </div>
+            <div class="stat-number-wrapper">
+                <span class="stat-count" data-target="10">0</span>+
+            </div>
+            <div class="stat-label">Categories</div>
+        </div>
+
+        <!-- Stat 3: Designs -->
+        <div class="stat-item">
+            <div class="stat-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                    <path d="M2 2l7.586 7.586"></path>
+                    <circle cx="11" cy="11" r="2"></circle>
+                </svg>
+            </div>
+            <div class="stat-number-wrapper">
+                <span class="stat-count" data-target="1000">0</span>+
+            </div>
+            <div class="stat-label">Designs</div>
+        </div>
+
+        <!-- Stat 4: Fabric Printed -->
+        <div class="stat-item">
+            <div class="stat-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                    </path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+            </div>
+            <div class="stat-number-wrapper">
+                <span class="stat-count" data-target="10000">0</span>+
+            </div>
+            <div class="stat-label">Fabric Printed<br><small
+                    style="font-size: 0.7em; opacity: 0.8; text-transform: none;">meters/month</small></div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

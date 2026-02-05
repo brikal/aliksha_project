@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ product.name }} - Aliksha
+{% endblock %}
+
+{% block content %}
+
+<div class="product-page">
+
+    <div class="product-image">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+    </div>
+
+    <div class="product-info">
+        <h1>{{ product.name }}</h1>
+
+        <p class="product-price-big">₹ {{ product.price }}</p>
+
+        <p class="product-description">
+            {{ product.description }}
+        </p>
+
+        <a href="/add-to-cart/{{ product.id }}/">
+            <button class="btn">Add to Cart</button>
+        </a>
+
+        <br><br>
+
+        <a href="/" style="color: var(--secondary); text-decoration: none;">
+            ← Back to products
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

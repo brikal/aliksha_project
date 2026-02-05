@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}All Collections | Aliksha{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<div class="category-header">
+    <h1>All Collections</h1>
+    <p class="category-count">Explore our exclusive range</p>
+</div>
+
+<!-- Collections Grid -->
+<div class="collections-section" style="padding-bottom: 80px; background: var(--bg-body);">
+    <div class="container">
+        <div class="editorial-grid">
+            {% for collection in footer_collections %}
+            <a href="{% url 'collections' collection.slug %}" class="product-link">
+                <div class="editorial-card">
+                    <div class="image-wrapper">
+                        <img src="{% static collection.image %}" alt="{{ collection.name }}">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">{{ collection.name }}</h3>
+                        <p class="product-price">VIEW COLLECTION</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
