@@ -122,7 +122,7 @@
         <aside class="cart-drawer-panel" role="document" aria-label="Shopping cart">
             <div class="cart-drawer-header">
                 <h3>My Bag</h3>
-                <button class="cart-drawer-close" id="cartDrawerClose" aria-label="Close cart">Ã—</button>
+                <button class="cart-drawer-close" id="cartDrawerClose" aria-label="Close cart">&times;</button>
             </div>
             <div class="cart-drawer-body">
                 {% if products %}
@@ -134,9 +134,13 @@
                         </div>
                         <div class="cart-drawer-info">
                             <h4>{{ product.name }}</h4>
-                            <p class="cart-drawer-price">â‚¹ {{ product.price }}</p>
-                            <div class="cart-drawer-meta">
-                                <span>Qty: {{ product.quantity }}</span>
+                            <p class="cart-drawer-price">&#8377; {{ product.price }}</p>
+                            <div class="cart-drawer-actions">
+                                <div class="cart-qty" aria-label="Quantity selector">
+                                    <button class="qty-btn" type="button" aria-label="Decrease quantity">-</button>
+                                    <span class="qty-value">{{ product.quantity }}</span>
+                                    <button class="qty-btn" type="button" aria-label="Increase quantity">+</button>
+                                </div>
                                 <a href="/remove-from-cart/{{ product.id }}/" class="cart-drawer-remove">Remove</a>
                             </div>
                         </div>
@@ -147,15 +151,17 @@
                 <div class="cart-drawer-empty">Your bag is empty.</div>
                 {% endif %}
             </div>
+            {% if products %}
             <div class="cart-drawer-footer">
                 <div class="cart-drawer-note">Taxes and shipping calculated at checkout.</div>
                 <div class="cart-drawer-total">
                     <span>Total</span>
-                    <strong>â‚¹ {{ total|default:"0.00" }}</strong>
+                    <strong>&#8377; {{ total|default:"0.00" }}</strong>
                 </div>
                 <a href="/cart/" class="cart-drawer-link">View cart</a>
-                <a href="/checkout/" class="btn cart-drawer-checkout">Checkout</a>
+                <a href="/checkout/" class="cart-drawer-checkout">Checkout</a>
             </div>
+            {% endif %}
         </aside>
     </div>
 
